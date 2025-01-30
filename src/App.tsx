@@ -4,8 +4,34 @@ import { ChefHat, Clock, MapPin, Phone, UtensilsCrossed } from 'lucide-react';
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div className="text-xl font-bold">
+              <span className="text-amber-500">La Maison</span> Dorée
+            </div>
+
+            {/* Navigation Links */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#home" className="hover:text-amber-500 transition-colors">Home</a>
+              <a href="#dishes" className="hover:text-amber-500 transition-colors">Dishes</a>
+              <a href="#about" className="hover:text-amber-500 transition-colors">About</a>
+              <a href="#contact" className="hover:text-amber-500 transition-colors">Contact</a>
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <button className="md:hidden text-white">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id='home' className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/background.jpg"
@@ -28,7 +54,7 @@ function App() {
       </section>
 
       {/* Featured Dishes */}
-      <section className="py-20 px-4 bg-white">
+      <section id='dishes' className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">Signature Dishes</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -68,7 +94,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-neutral-50">
+      <section id='about' className="py-20 px-4 bg-neutral-50">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <img
@@ -100,7 +126,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-white">
+      <section id='contact' className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">Visit Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
