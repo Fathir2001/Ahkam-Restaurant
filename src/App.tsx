@@ -8,7 +8,7 @@ function App() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1514516345957-556ca7c90c67?auto=format&fit=crop&q=80"
+            src="/background.jpg"
             alt="Restaurant interior"
             className="w-full h-full object-cover"
           />
@@ -16,14 +16,14 @@ function App() {
         </div>
         <div className="relative text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            La Maison Dorée
+            NEXT RESTAURANT
           </h1>
           <p className="text-xl md:text-2xl font-light mb-8">
             Experience culinary excellence in every bite
           </p>
-          <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full text-lg transition-all transform hover:scale-105">
+          {/* <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full text-lg transition-all transform hover:scale-105">
             Reserve a Table
-          </button>
+          </button> */}
         </div>
       </section>
 
