@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChefHat, Clock, MapPin, Phone, UtensilsCrossed } from 'lucide-react';
+import React from "react";
+import { ChefHat, Clock, MapPin, Phone, UtensilsCrossed } from "lucide-react";
 
 function App() {
   return (
@@ -8,22 +8,60 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="text-xl font-bold">
-              <span className="text-amber-500">La Maison</span> Dorée
+
+            <div className="flex items-center">
+              <img
+                src="/logo2.webp"
+                alt="La Maison Dorée Logo"
+                className="h-12 w-auto mr-3 hover:opacity-90 transition-opacity"
+              />
+              <div className="text-xl font-bold">
+                <span className="text-amber-500">La Maison</span> Dorée
+              </div>
             </div>
 
             {/* Navigation Links */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="hover:text-amber-500 transition-colors">Home</a>
-              <a href="#dishes" className="hover:text-amber-500 transition-colors">Dishes</a>
-              <a href="#about" className="hover:text-amber-500 transition-colors">About</a>
-              <a href="#contact" className="hover:text-amber-500 transition-colors">Contact</a>
+              <a
+                href="#home"
+                className="hover:text-amber-500 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#dishes"
+                className="hover:text-amber-500 transition-colors"
+              >
+                Dishes
+              </a>
+              <a
+                href="#about"
+                className="hover:text-amber-500 transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#contact"
+                className="hover:text-amber-500 transition-colors"
+              >
+                Contact
+              </a>
             </div>
-            
+
             {/* Mobile Menu Button */}
             <button className="md:hidden text-white">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -31,7 +69,10 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id='home' className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section
+        id="home"
+        className="relative h-screen flex items-center justify-center overflow-hidden"
+      >
         <div className="absolute inset-0">
           <img
             src="/background.jpg"
@@ -41,41 +82,52 @@ function App() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            NEXT RESTAURANT
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight overflow-hidden">
+            <span className="block animate-slideIn text-amber-500">NEXT</span>
+            RESTAURANT
           </h1>
-          <p className="text-xl md:text-2xl font-light mb-8">
-            Experience culinary excellence in every bite
+          <p className="text-xl md:text-2xl font-light mb-8 overflow-hidden">
+            <span className="block animate-slideUp animation-delay-300">
+              Experience culinary excellence in every bite
+            </span>
           </p>
-          {/* <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full text-lg transition-all transform hover:scale-105">
-            Reserve a Table
-          </button> */}
         </div>
       </section>
 
       {/* Featured Dishes */}
-      <section id='dishes' className="py-20 px-4 bg-white">
+      <section id="dishes" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Signature Dishes</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Signature Dishes
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80",
                 name: "Pan-Seared Salmon",
-                description: "Fresh Atlantic salmon with herbs and lemon butter sauce"
+                description:
+                  "Fresh Atlantic salmon with herbs and lemon butter sauce",
               },
               {
-                image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80",
                 name: "Beef Tenderloin",
-                description: "Premium cut with red wine reduction and truffle mash"
+                description:
+                  "Premium cut with red wine reduction and truffle mash",
               },
               {
-                image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80",
+                image:
+                  "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80",
                 name: "Lobster Risotto",
-                description: "Creamy Arborio rice with fresh lobster and parmesan"
-              }
+                description:
+                  "Creamy Arborio rice with fresh lobster and parmesan",
+              },
             ].map((dish, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl">
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl"
+              >
                 <img
                   src={dish.image}
                   alt={dish.name}
@@ -94,7 +146,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id='about' className="py-20 px-4 bg-neutral-50">
+      <section id="about" className="py-20 px-4 bg-neutral-50">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <img
@@ -106,10 +158,10 @@ function App() {
           <div>
             <h2 className="text-4xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Founded in 1985, La Maison Dorée has been a beacon of culinary excellence,
-              combining traditional French techniques with modern innovation. Our passionate
-              team of chefs creates unforgettable dining experiences using only the finest
-              seasonal ingredients.
+              Founded in 1985, La Maison Dorée has been a beacon of culinary
+              excellence, combining traditional French techniques with modern
+              innovation. Our passionate team of chefs creates unforgettable
+              dining experiences using only the finest seasonal ingredients.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="flex items-center gap-3">
@@ -126,7 +178,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id='contact' className="py-20 px-4 bg-white">
+      <section id="contact" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">Visit Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -135,7 +187,9 @@ function App() {
                 <MapPin className="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Location</h3>
-                  <p className="text-gray-600">123 Gourmet Avenue, Culinary District</p>
+                  <p className="text-gray-600">
+                    123 Gourmet Avenue, Culinary District
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -143,8 +197,10 @@ function App() {
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Hours</h3>
                   <p className="text-gray-600">
-                    Tuesday - Sunday<br />
-                    Lunch: 12:00 - 15:00<br />
+                    Tuesday - Sunday
+                    <br />
+                    Lunch: 12:00 - 15:00
+                    <br />
                     Dinner: 18:00 - 23:00
                   </p>
                 </div>
@@ -177,7 +233,9 @@ function App() {
       <footer className="bg-neutral-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold mb-4">La Maison Dorée</h3>
-          <p className="text-neutral-400 mb-6">Elevating dining to an art form</p>
+          <p className="text-neutral-400 mb-6">
+            Elevating dining to an art form
+          </p>
           <div className="border-t border-neutral-800 pt-6 mt-6">
             <p className="text-sm text-neutral-500">
               © {new Date().getFullYear()} La Maison Dorée. All rights reserved.

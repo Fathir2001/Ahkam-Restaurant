@@ -32,3 +32,38 @@ img {
     opacity: 1;
   }
 }
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease forwards;
+}
+
+.animate-slideIn {
+  animation: slideIn 1s ease forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
