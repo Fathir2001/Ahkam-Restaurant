@@ -103,25 +103,22 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                image:
-                  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80",
-                name: "Pan-Seared Salmon",
+                image: "/nasigoreng.jpg",
+                name: "Nasi Goreng",
                 description:
-                  "Fresh Atlantic salmon with herbs and lemon butter sauce",
+                  "Spiced Indonesian fried rice with sweet soy and a fried egg.",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80",
-                name: "Beef Tenderloin",
+                image: "/friedrice.jpg",
+                name: "Fried Rice",
                 description:
-                  "Premium cut with red wine reduction and truffle mash",
+                  "Fluffy stir-fried rice with veggies, meats, and rich flavors.",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80",
-                name: "Lobster Risotto",
+                image: "/mongolian.jpg",
+                name: "Mongolian Rice",
                 description:
-                  "Creamy Arborio rice with fresh lobster and parmesan",
+                  "Smoky, wok-tossed rice with savory Mongolian sauce.",
               },
             ].map((dish, index) => (
               <div
