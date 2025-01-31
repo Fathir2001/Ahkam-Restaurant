@@ -93,6 +93,7 @@ function App() {
         </div>
       </section>
 
+      
       {/* Featured Dishes */}
       <section id="dishes" className="py-28 px-4 bg-[#f8f5f0]">
         <div className="max-w-6xl mx-auto">
@@ -106,19 +107,88 @@ function App() {
               image: "/nasigoreng.jpg",
               name: "Nasi Goreng",
               description:
-                "Spiced Indonesian fried rice with sweet soy and a fried egg.",
+              "Spiced Indonesian fried rice with sweet soy and a fried egg.",
+              varieties: [
+              {
+              name: "Chicken",
+              sizes: [
+              { name: "Normal", price: 12.99 },
+              { name: "Full", price: 18.99 },
+              ],
+              },
+              {
+              name: "Beef",
+              sizes: [
+              { name: "Normal", price: 13.99 },
+              { name: "Full", price: 19.99 },
+              ],
+              },
+              {
+              name: "Mixed",
+              sizes: [
+              { name: "Normal", price: 14.99 },
+              { name: "Full", price: 20.99 },
+              ],
+              },
+              ],
               },
               {
               image: "/friedrice.jpg",
               name: "Fried Rice",
               description:
-                "Fluffy stir-fried rice with veggies, meats, and rich flavors.",
+              "Fluffy stir-fried rice with veggies, meats, and rich flavors.",
+              varieties: [
+              {
+              name: "Chicken",
+              sizes: [
+              { name: "Normal", price: 12.99 },
+              { name: "Full", price: 18.99 },
+              ],
+              },
+              {
+              name: "Beef",
+              sizes: [
+              { name: "Normal", price: 13.99 },
+              { name: "Full", price: 19.99 },
+              ],
+              },
+              {
+              name: "Mixed",
+              sizes: [
+              { name: "Normal", price: 14.99 },
+              { name: "Full", price: 20.99 },
+              ],
+              },
+              ],
               },
               {
               image: "/mongolian.jpg",
               name: "Mongolian Rice",
               description:
-                "Smoky, wok-tossed rice with savory Mongolian sauce.",
+              "Smoky, wok-tossed rice with savory Mongolian sauce.",
+              varieties: [
+              {
+              name: "Chicken",
+              sizes: [
+              { name: "Normal", price: 12.99 },
+              { name: "Full", price: 18.99 },
+              ],
+              },
+              {
+              name: "Beef",
+              sizes: [
+              { name: "Normal", price: 13.99 },
+              { name: "Full", price: 19.99 },
+              ],
+              },
+              {
+              name: "Mixed",
+              sizes: [
+              { name: "Normal", price: 14.99 },
+              { name: "Full", price: 20.99 },
+              ],
+              },
+              ],
               },
             ].map((dish, index) => (
               <div
@@ -126,16 +196,42 @@ function App() {
               className="group relative overflow-hidden rounded-none border border-[#8B7355] shadow-xl transition-all duration-500"
               >
               <img
-                src={dish.image}
-                alt={dish.name}
-                className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
+              src={dish.image}
+              alt={dish.name}
+              className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute bottom-0 p-8 text-white">
-                <h3 className="text-2xl font-serif mb-3">{dish.name}</h3>
-                <div className="w-12 h-0.5 bg-[#D4AF37] mb-4"></div>
-                <p className="text-sm italic">{dish.description}</p>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+              <h3 className="text-2xl font-serif mb-3 text-white group-hover:translate-y-0 transition-transform duration-500">
+              {dish.name}
+              </h3>
+              <div className="w-12 h-0.5 bg-[#D4AF37] mb-4"></div>
+              <p className="text-sm italic mb-4 text-white">
+              {dish.description}
+              </p>
+              <div className="grid gap-4">
+              {dish.varieties.map((variety, i) => (
+              <div key={i}>
+              <h4 className={`${
+              variety.name === "Chicken" || variety.name === "Beef" || variety.name === "Mixed" ? "text-lg" : ""
+              } text-[#D4AF37] font-semibold mb-2`}>
+              {variety.name}
+              </h4>
+              <div className="grid grid-cols-2 gap-2">
+              {variety.sizes.map((size, j) => (
+              <div
+                key={j}
+                className="flex justify-between items-center text-white"
+              >
+                <span className="text-sm">{size.name}</span>
+                <span className="text-[#D4AF37]">
+                ${size.price}
+                </span>
+              </div>
+              ))}
+              </div>
+              </div>
+              ))}
+              </div>
               </div>
               </div>
             ))}
