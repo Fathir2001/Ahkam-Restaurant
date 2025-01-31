@@ -16,7 +16,7 @@ function App() {
                 className="h-12 w-auto mr-3 hover:opacity-90 transition-opacity"
               />
               <div className="text-xl font-bold">
-                <span className="text-amber-500">La Maison</span> Dorée
+                <span className="text-amber-500">NEXT</span>
               </div>
             </div>
 
@@ -150,7 +150,7 @@ function App() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&q=80"
+              src="/chef.jpg"
               alt="Chef preparing food"
               className="rounded-xl shadow-xl"
             />
