@@ -4,8 +4,8 @@ import { ChefHat, Clock, MapPin, Phone, UtensilsCrossed } from "lucide-react";
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/95 text-white border-b border-[#8B7355]">
+        <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
 
@@ -77,30 +77,30 @@ function App() {
           <img
             src="/background.jpg"
             alt="Restaurant interior"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover filter brightness-50"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
         </div>
         <div className="relative text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight overflow-hidden">
-            <span className="block animate-slideIn text-amber-500">NEXT</span>
-            RESTAURANT
+          <h1 className="text-6xl md:text-8xl font-serif mb-6 tracking-wider">
+            <span className="block animate-slideIn text-[#D4AF37]">NEXT</span>
+            <span className="block mt-4">RESTAURANT</span>
           </h1>
-          <p className="text-xl md:text-2xl font-light mb-8 overflow-hidden">
-            <span className="block animate-slideUp animation-delay-300">
-              Experience culinary excellence in every bite
-            </span>
+          <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-8"></div>
+          <p className="text-xl md:text-2xl font-light mb-8 italic">
+            "Experience culinary excellence in every bite"
           </p>
         </div>
       </section>
 
       {/* Featured Dishes */}
-      <section id="dishes" className="py-20 px-4 bg-white">
+      <section id="dishes" className="py-28 px-4 bg-[#f8f5f0]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl font-serif text-center mb-4">
             Signature Dishes
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="w-24 h-0.5 bg-[#D4AF37] mx-auto mb-16"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
                 image: "/nasigoreng.jpg",
@@ -123,17 +123,18 @@ function App() {
             ].map((dish, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-none border border-[#8B7355] shadow-xl transition-all duration-500"
               >
                 <img
                   src={dish.image}
                   alt={dish.name}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-2">{dish.name}</h3>
-                    <p className="text-sm">{dish.description}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute bottom-0 p-8 text-white">
+                    <h3 className="text-2xl font-serif mb-3">{dish.name}</h3>
+                    <div className="w-12 h-0.5 bg-[#D4AF37] mb-4"></div>
+                    <p className="text-sm italic">{dish.description}</p>
                   </div>
                 </div>
               </div>
