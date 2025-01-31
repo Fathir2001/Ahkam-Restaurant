@@ -1,11 +1,11 @@
-import React from "react";
+// import React from "react";
 import { ChefHat, Clock, MapPin, Phone, UtensilsCrossed } from "lucide-react";
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/95 text-white border-b border-[#8B7355]">
-        <div className="max-w-6xl mx-auto px-4 py-6">
+        <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
 
@@ -103,40 +103,40 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
-                image: "/nasigoreng.jpg",
-                name: "Nasi Goreng",
-                description:
-                  "Spiced Indonesian fried rice with sweet soy and a fried egg.",
+              image: "/nasigoreng.jpg",
+              name: "Nasi Goreng",
+              description:
+                "Spiced Indonesian fried rice with sweet soy and a fried egg.",
               },
               {
-                image: "/friedrice.jpg",
-                name: "Fried Rice",
-                description:
-                  "Fluffy stir-fried rice with veggies, meats, and rich flavors.",
+              image: "/friedrice.jpg",
+              name: "Fried Rice",
+              description:
+                "Fluffy stir-fried rice with veggies, meats, and rich flavors.",
               },
               {
-                image: "/mongolian.jpg",
-                name: "Mongolian Rice",
-                description:
-                  "Smoky, wok-tossed rice with savory Mongolian sauce.",
+              image: "/mongolian.jpg",
+              name: "Mongolian Rice",
+              description:
+                "Smoky, wok-tossed rice with savory Mongolian sauce.",
               },
             ].map((dish, index) => (
               <div
-                key={index}
-                className="group relative overflow-hidden rounded-none border border-[#8B7355] shadow-xl transition-all duration-500"
+              key={index}
+              className="group relative overflow-hidden rounded-none border border-[#8B7355] shadow-xl transition-all duration-500"
               >
-                <img
-                  src={dish.image}
-                  alt={dish.name}
-                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute bottom-0 p-8 text-white">
-                    <h3 className="text-2xl font-serif mb-3">{dish.name}</h3>
-                    <div className="w-12 h-0.5 bg-[#D4AF37] mb-4"></div>
-                    <p className="text-sm italic">{dish.description}</p>
-                  </div>
+              <img
+                src={dish.image}
+                alt={dish.name}
+                className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute bottom-0 p-8 text-white">
+                <h3 className="text-2xl font-serif mb-3">{dish.name}</h3>
+                <div className="w-12 h-0.5 bg-[#D4AF37] mb-4"></div>
+                <p className="text-sm italic">{dish.description}</p>
                 </div>
+              </div>
               </div>
             ))}
           </div>
